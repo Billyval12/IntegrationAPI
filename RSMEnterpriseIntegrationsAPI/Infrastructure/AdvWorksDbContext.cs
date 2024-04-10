@@ -24,6 +24,8 @@
 
         public virtual DbSet<Product> Products {get; set;}
 
+        //public virtual DbSet<SalesOrderHeader> SalesOrderHeaders { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

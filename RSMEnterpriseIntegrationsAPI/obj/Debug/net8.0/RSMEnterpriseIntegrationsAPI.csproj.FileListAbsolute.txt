@@ -209,3 +209,4 @@ C:\Users\drher\Desktop\RSM-US\Integrations session\IntegrationAPI\RSMEnterpriseI
 C:\Users\drher\Desktop\RSM-US\Integrations session\IntegrationAPI\RSMEnterpriseIntegrationsAPI\obj\Debug\net8.0\RSMEnterpriseIntegrationsAPI.pdb
 C:\Users\drher\Desktop\RSM-US\Integrations session\IntegrationAPI\RSMEnterpriseIntegrationsAPI\obj\Debug\net8.0\RSMEnterpriseIntegrationsAPI.genruntimeconfig.cache
 C:\Users\drher\Desktop\RSM-US\Integrations session\IntegrationAPI\RSMEnterpriseIntegrationsAPI\obj\Debug\net8.0\ref\RSMEnterpriseIntegrationsAPI.dll
+C:\Users\drher\Desktop\RSM-US\Integrations session\IntegrationAPI\RSMEnterpriseIntegrationsAPI\obj\Debug\net8.0\RSMEnterpriseIntegrationsAPI.sourcelink.json
