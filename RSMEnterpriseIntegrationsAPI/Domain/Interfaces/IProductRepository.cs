@@ -1,9 +1,7 @@
-using RSMEnterpriseIntegrationsAPI.Domain.Models;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
 namespace RSMEnterpriseIntegrationsAPI.Domain.Interfaces
 {
+    using RSMEnterpriseIntegrationsAPI.Domain.Models;
+
     public interface IProductRepository
     {
         Task<Product?> GetProductById(int id);

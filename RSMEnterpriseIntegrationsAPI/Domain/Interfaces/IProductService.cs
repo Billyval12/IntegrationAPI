@@ -1,9 +1,7 @@
-using RSMEnterpriseIntegrationsAPI.Application.DTOs;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
 namespace RSMEnterpriseIntegrationsAPI.Domain.Interfaces
 {
+    using RSMEnterpriseIntegrationsAPI.Application.DTOs;
+
     public interface IProductService
     {
         Task<GetProductDto?> GetProductById(int id);

@@ -1,11 +1,10 @@
-using Microsoft.AspNetCore.Mvc;
-using RSMEnterpriseIntegrationsAPI.Application.DTOs;
-using RSMEnterpriseIntegrationsAPI.Domain.Interfaces;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
 namespace RSMEnterpriseIntegrationsAPI.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+
+    using RSMEnterpriseIntegrationsAPI.Application.DTOs;
+    using RSMEnterpriseIntegrationsAPI.Domain.Interfaces;
+    
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
@@ -18,12 +17,12 @@ namespace RSMEnterpriseIntegrationsAPI.Controllers
         }
 
         [HttpGet("GetAll")]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(await _service.GetAll());
+             return Ok(await _service.GetAll());
         }
 
-        [HttpGet("Get")]
+        [HttpGet("Get")]        
         public async Task<IActionResult> Get([FromQuery]int id)
         {
             return Ok(await _service.GetProductById(id));
@@ -48,4 +47,3 @@ namespace RSMEnterpriseIntegrationsAPI.Controllers
         }
     }
 }
- 

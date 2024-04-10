@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RSMEnterpriseIntegrationsAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+178f763fdb8d8d76dba4a63f61d93d6ef07fa40f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0de9e1d2083733bfeb764c2e9bd807ab919e58be")]
 [assembly: System.Reflection.AssemblyProductAttribute("RSMEnterpriseIntegrationsAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RSMEnterpriseIntegrationsAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

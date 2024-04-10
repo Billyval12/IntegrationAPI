@@ -1,15 +1,16 @@
-using Microsoft.EntityFrameworkCore;
-using RSMEnterpriseIntegrationsAPI.Domain.Interfaces;
-using RSMEnterpriseIntegrationsAPI.Domain.Models;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
 namespace RSMEnterpriseIntegrationsAPI.Infrastructure.Repositories
 {
+    using Microsoft.EntityFrameworkCore;
+
+    using RSMEnterpriseIntegrationsAPI.Domain.Interfaces;
+    using RSMEnterpriseIntegrationsAPI.Domain.Models;
+
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    
     public class ProductRepository : IProductRepository
     {
         private readonly AdvWorksDbContext _context;
-
         public ProductRepository(AdvWorksDbContext context)
         {
             _context = context;
@@ -24,6 +25,7 @@ namespace RSMEnterpriseIntegrationsAPI.Infrastructure.Repositories
         public async Task<int> DeleteProduct(Product product)
         {
             _context.Remove(product);
+
             return await _context.SaveChangesAsync();
         }
 
@@ -38,7 +40,7 @@ namespace RSMEnterpriseIntegrationsAPI.Infrastructure.Repositories
         {
             return await _context.Products
                 .AsNoTracking()
-                .FirstOrDefaultAsync(p => p.ProductID == id);
+                .FirstOrDefaultAsync(pc => pc.ProductID == id);
         }
 
         public async Task<int> UpdateProduct(Product product)
