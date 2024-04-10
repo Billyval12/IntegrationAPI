@@ -1,14 +1,16 @@
-using Microsoft.EntityFrameworkCore;
-using RSMEnterpriseIntegrationsAPI.Domain.Interfaces;
-using RSMEnterpriseIntegrationsAPI.Domain.Models;
-
-
 namespace RSMEnterpriseIntegrationsAPI.Infrastructure.Repositories
 {
+    using Microsoft.EntityFrameworkCore;
+
+    using RSMEnterpriseIntegrationsAPI.Domain.Interfaces;
+    using RSMEnterpriseIntegrationsAPI.Domain.Models;
+
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    
     public class ProductCategoryRepository : IProductCategoryRepository
     {
         private readonly AdvWorksDbContext _context;
-
         public ProductCategoryRepository(AdvWorksDbContext context)
         {
             _context = context;
@@ -20,15 +22,11 @@ namespace RSMEnterpriseIntegrationsAPI.Infrastructure.Repositories
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<int> DeleteProductCategory(int id)
+        public async Task<int> DeleteProductCategory(ProductCategory productCategory)
         {
-            var productCategory = await GetProductCategoryById(id);
-            if (productCategory != null)
-            {
-                _context.Remove(productCategory);
-                return await _context.SaveChangesAsync();
-            }
-            return 0; // Opcional: Puedes manejar el caso en que la categoría no se encuentre en la base de datos
+            _context.Remove(productCategory);
+
+            return await _context.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<ProductCategory>> GetAllProductCategories()
@@ -42,7 +40,7 @@ namespace RSMEnterpriseIntegrationsAPI.Infrastructure.Repositories
         {
             return await _context.ProductCategories
                 .AsNoTracking()
-                .FirstOrDefaultAsync(pc => pc.ProductCategoryId == id);
+                .FirstOrDefaultAsync(pc => pc.ProductCategoryID == id);
         }
 
         public async Task<int> UpdateProductCategory(ProductCategory productCategory)

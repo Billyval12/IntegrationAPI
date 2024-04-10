@@ -21,15 +21,21 @@ builder.Services.AddDbContext<AdvWorksDbContext>(options =>
         opt => opt.MigrationsAssembly(typeof(AdvWorksDbContext).Assembly.FullName));
 });
 
+//DEPARTMENT
 builder.Services.AddTransient<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddTransient<IDepartmentService, DepartmentService>();
 
+//PRODUCT CATEGORY
 builder.Services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
 builder.Services.AddTransient<IProductCategoryService, ProductCategoryService>();
 
+//PRODUCT
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
 builder.Services.AddTransient<IProductService, ProductService>();
 
+//SALES ORDER
+builder.Services.AddTransient<ISalesOrderHeaderRepository, SalesOrderHeaderRepository>();
+builder.Services.AddTransient<ISalesOrderHeaderService, SalesOrderHeaderService>();
 
 var app = builder.Build();
 

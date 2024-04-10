@@ -1,10 +1,10 @@
-namespace RSMEnterpriseIntegrationsAPI.Domain.Models
+namespace RSMEnterpriseIntegrationsAPI.Application.DTOs
 {
-    public class ProductCategory
+    public class GetProductCategoryDto
     {
         public int ProductCategoryID { get; set; }
         public string? Name { get; set; }
         public Guid Rowguid { get; set; } = Guid.NewGuid();
-        public DateTime ModifiedDate { get; set; } = DateTime.Now;
+    
     }
 }

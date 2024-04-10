@@ -1,15 +1,13 @@
-namespace RSMEnterpriseIntegrationsAPI.Domain.Models
+namespace RSMEnterpriseIntegrationsAPI.Application.DTOs
 {
-    public class SalesOrderHeader
+    public class CreateSalesOrderHeaderDto
     {
-        public int SalesOrderID { get; set; }
         public byte RevisionNumber { get; set; }
         public DateTime OrderDate { get; set; }
         public DateTime DueDate { get; set; }
         public DateTime? ShipDate { get; set; }
         public byte Status { get; set; } 
         public bool OnlineOrderFlag { get; set; } 
-        public string? SalesOrderNumber { get; set; } 
         public string? PurchaseOrderNumber { get; set; }
         public string? AccountNumber { get; set; }
         public int CustomerID { get; set; }
@@ -24,9 +22,7 @@ namespace RSMEnterpriseIntegrationsAPI.Domain.Models
         public decimal SubTotal { get; set; }
         public decimal TaxAmt { get; set; } 
         public decimal Freight { get; set; } 
-        public decimal TotalDue { get; set; } 
-        public string? Comment { get; set; }
-        public Guid Rowguid { get; set; } = Guid.NewGuid();
-        public DateTime ModifiedDate { get; set; } = DateTime.Now;
+        //public string? Comment { get; set; }
     }
 }
+
